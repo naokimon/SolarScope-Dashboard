@@ -127,3 +127,31 @@ body {
     background-color: var(--secondary-color);
     border-radius: 12.5px;
 }
+
+@media (max-width: 1200px) {
+    .dashboard {
+        padding: 20px;
+    }
+
+    .block-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .block-grid {
+        width: 100%;
+        height: auto;
+    }
+
+    .dashboard-grid-block {
+        width: 100%;
+    }
+    .footer {
+        height: auto;
+        padding: 20px;
+    }
+    .main-header {
+        height: auto;
+        padding: 20px;
+    }
+}
