@@ -128,6 +128,77 @@ body {
     border-radius: 12.5px;
 }
 
+.dashboard-block h1 {
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.dashboard-grid-block h1 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 12px 14px 4px;
+}
+
+.temperatuur {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0 14px;
+    color: var(--primary-color);
+}
+
+.weerverwachting-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.uurverwachting {
+    list-style: none;
+    padding: 0 20px 20px;
+    margin: 0;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.uurverwachting li {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    font-size: 0.95rem;
+}
+
+.uurverwachting li:last-child {
+    border-bottom: none;
+}
+
+.uurverwachting .uur {
+    font-weight: 600;
+}
+
+.uurverwachting .kans {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.zon-opkomst{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 14px;
+}
+.zon-ondergang{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 14px;
+}
+
+.datum-tijd {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 14px;
+}
+
 @media (max-width: 1200px) {
     .dashboard {
         padding: 20px;
