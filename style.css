@@ -203,7 +203,8 @@ body {
     .main-page {
         height: auto;
         min-height: 100vh;
-        padding: 40px 0;
+        padding: 20px 0;
+        align-items: flex-start;
     }
 
     .main-page::after {
@@ -211,30 +212,60 @@ body {
     }
 
     .dashboard {
-        row-gap: 20px;
-        padding: 20px;
+        row-gap: 16px;
+        padding: 16px;
+        width: 100%;
     }
 
     .block-row {
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
     }
 
     .dashboard-block {
-        width: 90vw;
+        width: 100%;
         height: auto;
-        min-height: 200px;
+        min-height: 150px;
+    }
+
+    .dashboard-block h1 {
+        font-size: 1.2rem;
+        padding: 14px;
     }
 
     .block-grid {
-        width: 90vw;
+        width: 100%;
         height: auto;
-        column-gap: 20px;
-        row-gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
     }
 
     .dashboard-grid-block {
         width: 100%;
-        height: 120px;
+        height: auto;
+        min-height: 100px;
+    }
+
+    .dashboard-grid-block h1 {
+        font-size: 0.8rem;
+        padding: 10px 10px 4px;
+    }
+
+    .temperatuur,
+    .zon-opkomst,
+    .zon-ondergang,
+    .datum-tijd {
+        font-size: 1rem;
+        padding: 0 10px 10px;
+    }
+
+    .uurverwachting {
+        padding: 0 14px 14px;
+    }
+
+    .uurverwachting li {
+        font-size: 0.85rem;
+        gap: 8px;
     }
 }
