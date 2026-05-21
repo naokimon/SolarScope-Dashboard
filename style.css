@@ -32,14 +32,22 @@ body {
 }
 
 .footer {
-    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 15vh;
+    background-color: var(--secondary-color);
     color: white;
     text-align: center;
-    padding: 10px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    width: 100vw;
     font-weight: 600;
+    color: black;
+    gap: 1vh;
+}
+
+.footer h1 {
+    font-size: 1.2rem;
 }
 
 .footer h1,
