@@ -199,8 +199,19 @@ body {
     padding: 0 14px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
+    .main-page {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 0;
+    }
+
+    .main-page::after {
+        height: 100%;
+    }
+
     .dashboard {
+        row-gap: 20px;
         padding: 20px;
     }
 
@@ -209,20 +220,21 @@ body {
         gap: 20px;
     }
 
-    .block-grid {
-        width: 100%;
+    .dashboard-block {
+        width: 90vw;
         height: auto;
+        min-height: 200px;
+    }
+
+    .block-grid {
+        width: 90vw;
+        height: auto;
+        column-gap: 20px;
+        row-gap: 20px;
     }
 
     .dashboard-grid-block {
         width: 100%;
-    }
-    .footer {
-        height: auto;
-        padding: 20px;
-    }
-    .main-header {
-        height: auto;
-        padding: 20px;
+        height: 120px;
     }
 }

@@ -8,8 +8,8 @@ if ($response !== false) {
         $temperatuur = $data['current']['temperature_2m'];
     }
 }
-?>
-<?php // Zonopkomst en zonsondergang ophalen met api
+
+ // Zonopkomst en zonsondergang ophalen met api
 $opkomstdatum = null;
 $ondergangdatum = null;
 $api2Url = "https://api.sunrise-sunset.org/json?lat=52.22408&lng=-4.9041&date=today";
@@ -23,10 +23,8 @@ if ($response2 !== false) {
         $ondergangdatum = $data2['results']['sunset'];
     }
 }
-?>
 
-
-<?php // Uurverwachting (09:00 - 23:00) ophalen met api
+ // Uurverwachting (09:00 - 23:00) ophalen met api
 $uurverwachting = [];
 $api3Url = "https://api.open-meteo.com/v1/forecast?latitude=52.3676&longitude=4.9041&hourly=weathercode,precipitation_probability&timezone=Europe/Amsterdam&forecast_days=1";
 $response3 = @file_get_contents($api3Url);
