@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -24,7 +26,26 @@ body {
 }
 
 .main-header img {
-    height: 100px;
+    display: block;
+    max-height: 100%;
+    width: auto;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-weight: 600;
+}
+
+.footer h1,
+.footer p {
+    margin: 0;
 }
 
 .main-page {
