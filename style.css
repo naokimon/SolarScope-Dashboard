@@ -20,6 +20,12 @@ body {
     user-select: none;
 }
 
+.main-header img {
+    display: block;
+    max-height: 100%;
+    width: auto;
+}
+
 .footer {
     background-color: #333;
     color: white;
