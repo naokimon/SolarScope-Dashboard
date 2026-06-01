@@ -112,7 +112,7 @@ function weercode_naar_omschrijving($code)
 
                 </article>
                 <article class="dashboard-grid-block">
-
+                    <?php include "includes/dark-mode.php"; ?>
                 </article>
             </div>
             <div class="block-grid">
