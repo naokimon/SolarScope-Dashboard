@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-/* ==========================================================================
-   Reset & variabelen
-   ========================================================================== */
-
 * {
     padding: 0;
     margin: 0;
@@ -21,14 +17,10 @@ body {
     background-color: var(--primary-color);
 }
 
-/* ==========================================================================
-   Header & footer
-   ========================================================================== */
-
 .main-header {
     display: flex;
-    align-items: center;
     height: 15vh;
+    align-items: center;
     padding: 10px;
     background-color: var(--secondary-color);
     user-select: none;
@@ -42,15 +34,15 @@ body {
 
 .footer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    flex-direction: column;
     height: 15vh;
-    gap: 1vh;
     background-color: var(--secondary-color);
     text-align: center;
+    width: 100vw;
     font-weight: 600;
+    gap: 1vh;
 }
 
 .footer h1 {
@@ -62,17 +54,13 @@ body {
     margin: 0;
 }
 
-/* ==========================================================================
-   Main page & achtergrond
-   ========================================================================== */
-
 .main-page {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    position: relative;
     height: 140vh;
+    width: 100vw;
 }
 
 .main-page::after {
@@ -81,23 +69,19 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
     height: 140vh;
+    width: 100vw;
     background-image: url("img/forest.png");
     background-size: cover;
     opacity: 0.4;
 }
 
-/* ==========================================================================
-   Dashboard layout
-   ========================================================================== */
-
 .dashboard {
-    position: relative;
-    z-index: 30;
     display: flex;
     flex-direction: column;
     row-gap: 38px;
+    position: relative;
+    z-index: 30;
     padding: 40px;
 }
 
@@ -107,11 +91,21 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 25px;
+    background-color: var(--secondary-color);
     width: 100%;
     height: 100%;
-    background-color: var(--secondary-color);
-    border-radius: 25px;
     opacity: 0.5;
+}
+
+.dashboard-block {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 550px;
+    background-color: var(--secondary-color);
+    border-radius: 12.5px;
 }
 
 .block-row {
@@ -122,33 +116,20 @@ body {
 .block-grid {
     display: flex;
     flex-wrap: wrap;
-    width: 550px;
     height: 300px;
+    width: 550px;
     row-gap: 38px;
     column-gap: 50px;
 }
 
-/* ==========================================================================
-   Dashboard blokken
-   ========================================================================== */
-
-.dashboard-block,
 .dashboard-grid-block {
     z-index: 100;
     display: flex;
     flex-direction: column;
+    height: 136px;
+    width: 250px;
     background-color: var(--secondary-color);
     border-radius: 12.5px;
-}
-
-.dashboard-block {
-    width: 550px;
-    height: 300px;
-}
-
-.dashboard-grid-block {
-    width: 250px;
-    height: 136px;
 }
 
 .dashboard-block h1 {
@@ -162,35 +143,11 @@ body {
     padding: 12px 14px 4px;
 }
 
-.block-signature {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: auto;
-    padding: 0 0 12px;
-    font-size: 0.5rem;
-    font-weight: 300;
-    text-align: center;
-}
-
-/* ==========================================================================
-   Widgets
-   ========================================================================== */
-
 .temperatuur {
-    padding: 0 14px;
     font-size: 2rem;
     font-weight: 600;
-    color: var(--primary-color);
-}
-
-.zon-opkomst,
-.zon-ondergang,
-.datum-tijd {
     padding: 0 14px;
-    font-size: 1.2rem;
-    font-weight: 600;
+    color: var(--primary-color);
 }
 
 .weerverwachting-block {
@@ -199,11 +156,11 @@ body {
 }
 
 .uurverwachting {
-    flex: 1;
     list-style: none;
-    margin: 0;
     padding: 0 20px 20px;
+    margin: 0;
     overflow-y: auto;
+    flex: 1;
 }
 
 .uurverwachting li {
@@ -229,42 +186,33 @@ body {
     font-weight: 600;
 }
 
-/* ==========================================================================
-   Dark mode toggle
-   ========================================================================== */
+.zon-opkomst{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 14px;
+}
+.zon-ondergang{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 14px;
+}
 
-.dm-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.datum-tijd {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 14px;
+}
+
+.block-signature {
+    margin-top: auto;
     width: 100%;
-    height: 100%;
-}
-
-#dark-mode {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: var(--button-hover);
-    border: 3px solid black;
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer;
-    transition: 0.4s ease;
-}
-
-#dark-mode:hover {
-    background-color: var(--primary-color);
-}
-
-#dark-mode svg {
-    fill: var(--secondary-color);
-}
-
-#dark-mode svg:last-child {
-    display: none;
+    padding: 0 0 12px;
+    font-size: 0.5rem;
+    font-weight: 300;
+    text-align: center;
 }
 
 .dark-mode {
@@ -278,7 +226,41 @@ body {
     fill: white;
 }
 
-.dark-mode #dark-mode svg:first-child {
+.dm-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#dark-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-hover);
+    outline: none;
+    border: 3px solid black;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+#dark-mode:hover {
+    background-color: var(--primary-color   );
+}
+
+#dark-mode svg{
+    fill: var(--secondary-color);
+}
+
+#dark-mode svg:last-child{
+    display: none;
+}
+
+.dark-mode #dark-mode svg:first-child{
     display: none;
 }
 
@@ -286,9 +268,13 @@ body {
     display: block;
 }
 
-/* ==========================================================================
-   Responsive: mobiel
-   ========================================================================== */
+.chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 
 @media (max-width: 768px) {
     .main-page {
@@ -303,9 +289,9 @@ body {
     }
 
     .dashboard {
-        width: 100%;
         row-gap: 16px;
         padding: 16px;
+        width: 100%;
     }
 
     .block-row {
@@ -325,10 +311,10 @@ body {
     }
 
     .block-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         width: 100%;
         height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 12px;
     }
 
@@ -347,8 +333,8 @@ body {
     .zon-opkomst,
     .zon-ondergang,
     .datum-tijd {
-        padding: 0 10px 10px;
         font-size: 1rem;
+        padding: 0 10px 10px;
     }
 
     .uurverwachting {
@@ -356,7 +342,7 @@ body {
     }
 
     .uurverwachting li {
-        gap: 8px;
         font-size: 0.85rem;
+        gap: 8px;
     }
 }
