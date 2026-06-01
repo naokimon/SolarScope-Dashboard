@@ -82,7 +82,7 @@ function weercode_naar_omschrijving($code)
                 <?php include "includes/fynn.php" ?>
             </article>
             <article class="dashboard-block">
-
+                <?php include "includes/gas.php"; ?>
             </article>
         </div>
         <div class="block-row">

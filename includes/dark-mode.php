@@ -5,24 +5,4 @@
     </button>
 </div>
 <?php include "includes/nathan.php" ?>
-<script type="text/javascript" defer>
-    let darkMode = localStorage.getItem("darkmode");
-    const button = document.getElementById("dark-mode");
-
-    const enableDarkmode = () => {
-        document.body.classList.add("dark-mode");
-        localStorage.setItem("darkmode", "active");
-    }
-
-    const disableDarkmode = () => {
-        document.body.classList.remove("dark-mode");
-        localStorage.setItem("darkmode", null);
-    }
-
-    if (darkMode === "active") enableDarkmode();
-
-    button.addEventListener("click", () => {
-        darkMode = localStorage.getItem("darkmode")
-        darkMode !== "active" ? enableDarkmode() : disableDarkmode();
-    })
-</script>
+<script type="text/javascript" defer src="../js/darkmode.js"></script>
