@@ -100,6 +100,8 @@ body {
 }
 
 .dashboard-block {
+    display: flex;
+        flex-direction: column;
     z-index: 40;
     height: 300px;
     width: 550px;
@@ -122,6 +124,8 @@ body {
 }
 
 .dashboard-grid-block {
+    display: flex;
+        flex-direction: column;
     height: 136px;
     width: 250px;
     background-color: var(--secondary-color);
@@ -199,6 +203,17 @@ body {
     padding: 0 14px;
 }
 
+.block-signature {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 12px;
+    font-size: 0.5rem;
+    font-weight: 300;
+    text-align: center;
+}
 @media (max-width: 768px) {
     .main-page {
         height: auto;

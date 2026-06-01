@@ -9,7 +9,7 @@ if ($response !== false) {
     }
 }
 
- // Zonopkomst en zonsondergang ophalen met api
+// Zonopkomst en zonsondergang ophalen met api
 $opkomstdatum = null;
 $ondergangdatum = null;
 $api2Url = "https://api.sunrise-sunset.org/json?lat=52.22408&lng=-4.9041&date=today";
@@ -24,7 +24,7 @@ if ($response2 !== false) {
     }
 }
 
- // Uurverwachting (09:00 - 23:00) ophalen met api
+// Uurverwachting (09:00 - 23:00) ophalen met api
 $uurverwachting = [];
 $api3Url = "https://api.open-meteo.com/v1/forecast?latitude=52.3676&longitude=4.9041&hourly=weathercode,precipitation_probability&timezone=Europe/Amsterdam&forecast_days=1";
 $response3 = @file_get_contents($api3Url);
@@ -44,7 +44,8 @@ if ($response3 !== false) {
     }
 }
 
-function weercode_naar_omschrijving($code) {
+function weercode_naar_omschrijving($code)
+{
     if ($code === 0) return "Zonnig";
     if (in_array($code, [1, 2], true)) return "Gedeeltelijk bewolkt";
     if ($code === 3) return "Bewolkt";
@@ -64,20 +65,21 @@ function weercode_naar_omschrijving($code) {
     <section class="dashboard">
         <div class="block-row">
             <article class="dashboard-block weerverwachting-block">
-            <h1>Weerverwachting in Amsterdam</h1>
-            <?php if (!empty($uurverwachting)): ?>
-                <ul class="uurverwachting">
-                    <?php foreach ($uurverwachting as $u): ?>
-                        <li>
-                            <span class="uur"><?php echo sprintf('%02d:00', $u['uur']); ?></span>
-                            <span class="weer"><?php echo htmlspecialchars(weercode_naar_omschrijving($u['code'])); ?></span>
-                            <span class="kans"><?php echo htmlspecialchars($u['kans']); ?>%</span>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php else: ?>
-                <p class="weerverwachting">Niet beschikbaar</p>
-            <?php endif; ?>
+                <h1>Weerverwachting in Amsterdam</h1>
+                <?php if (!empty($uurverwachting)): ?>
+                    <ul class="uurverwachting">
+                        <?php foreach ($uurverwachting as $u): ?>
+                            <li>
+                                <span class="uur"><?php echo sprintf('%02d:00', $u['uur']); ?></span>
+                                <span class="weer"><?php echo htmlspecialchars(weercode_naar_omschrijving($u['code'])); ?></span>
+                                <span class="kans"><?php echo htmlspecialchars($u['kans']); ?>%</span>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php else: ?>
+                    <p class="weerverwachting">Niet beschikbaar</p>
+                <?php endif; ?>
+                <?php include "includes/fynn.php" ?>
             </article>
             <article class="dashboard-block">
 
@@ -86,10 +88,11 @@ function weercode_naar_omschrijving($code) {
         <div class="block-row">
             <div class="block-grid">
                 <article class="dashboard-grid-block">
-                <h1>Actuele temperatuur Amsterdam</h1>
-                <p class="temperatuur">
-                    <?php echo $temperatuur !== null ? htmlspecialchars($temperatuur) . " &deg;C" : "Niet beschikbaar"; ?>
-                </p>
+                    <h1>Actuele temperatuur Amsterdam</h1>
+                    <p class="temperatuur">
+                        <?php echo $temperatuur !== null ? htmlspecialchars($temperatuur) . " &deg;C" : "Niet beschikbaar"; ?>
+                    </p>
+                    <?php include "includes/fynn.php" ?>
 
                 </article>
                 <article class="dashboard-grid-block">
@@ -100,10 +103,12 @@ function weercode_naar_omschrijving($code) {
                     <p class="zon-ondergang">
                         <?php echo $ondergangdatum !== null ? htmlspecialchars($ondergangdatum) : "Niet beschikbaar"; ?>
                     </p>
+                    <?php include "includes/fynn.php" ?>
                 </article>
                 <article class="dashboard-grid-block">
                     <h1>Huidige datum en tijd</h1>
                     <p class="datum-tijd" id="datumtijd"><?php echo htmlspecialchars($datumtijd); ?></p>
+                    <?php include "includes/fynn.php" ?>
 
                 </article>
                 <article class="dashboard-grid-block">
@@ -137,19 +142,19 @@ function weercode_naar_omschrijving($code) {
 </main>
 
 <script>
-(function () {
-    const target = document.getElementById('datumtijd');
-    if (!target) {
-        return;
-    }
+    (function() {
+        const target = document.getElementById('datumtijd');
+        if (!target) {
+            return;
+        }
 
-    const pad = (value) => String(value).padStart(2, '0');
-    const updateDatumTijd = () => {
-        const now = new Date();
-        target.textContent = `${pad(now.getDate())}-${pad(now.getMonth() + 1)}-${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
-    };
+        const pad = (value) => String(value).padStart(2, '0');
+        const updateDatumTijd = () => {
+            const now = new Date();
+            target.textContent = `${pad(now.getDate())}-${pad(now.getMonth() + 1)}-${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+        };
 
-    updateDatumTijd();
-    setInterval(updateDatumTijd, 1000);
-})();
+        updateDatumTijd();
+        setInterval(updateDatumTijd, 1000);
+    })();
 </script>
