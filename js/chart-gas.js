@@ -2,7 +2,7 @@ let chartData;
 
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(async () => {
-    chartData = await fetch("../includes/gas.json").then(r => r.json());
+    chartData = await fetch("data/gas.json").then(r => r.json());
     drawChart();
 });
 

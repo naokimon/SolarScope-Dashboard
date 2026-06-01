@@ -1,4 +1,4 @@
 <footer class="footer">
-	<h1> Nathan • Fynn • Petra • <Zakaria></Zakaria> </h1>
+	<h1> Nathan • Fynn • Petra • Zakaria </h1>
 	<p id="copyright"> ©SolarScope</p>
 </footer>
