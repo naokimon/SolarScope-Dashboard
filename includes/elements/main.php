@@ -51,7 +51,7 @@
         </div>
         <div class="block-row">
             <article class="dashboard-block">
-
+                <?php include "includes/widgets/tijdspanne.php"; ?>
             </article>
             <article class="dashboard-block">
 

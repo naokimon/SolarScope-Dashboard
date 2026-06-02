@@ -276,6 +276,35 @@ body {
     height: 100%;
 }
 
+.tijdspanne-knoppen {
+    display: flex;
+    gap: 12px;
+    padding: 16px 20px;
+}
+
+.tijdspanne-knop {
+    font-family: "Inter", serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 28px;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tijdspanne-knop:hover {
+    background-color: var(--button-hover);
+    color: var(--secondary-color);
+}
+
+.tijdspanne-knop.actief {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
 @media (max-width: 768px) {
     .main-page {
         height: auto;
