@@ -25,7 +25,6 @@ async function drawChart(periode) {
 
     const darkMode = localStorage.getItem("darkmode");
     const title  = darkMode === "active" ? "#EFF0E3" : "#000000";
-    const bg     = darkMode === "active" ? "#1d1d1d" : "#EFF0E3";
     const colors = darkMode === "active" ? ["#FF8C35"] : ["#FF6F06"];
 
     const data  = google.visualization.arrayToDataTable(chartData);
@@ -33,7 +32,7 @@ async function drawChart(periode) {
     chart.draw(data, {
         title: titels[periode],
         titleTextStyle: { color: title },
-        backgroundColor: bg,
+        backgroundColor: "transparent",
         colors: colors,
         legend: { position: "bottom", textStyle: { color: title } },
         hAxis: { textStyle: { color: title }, gridlines: { color: "transparent" } },

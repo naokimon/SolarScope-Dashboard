@@ -1,4 +1,18 @@
 <footer class="footer">
-	<h1> Nathan • Fynn • Petra • Zakaria </h1>
-	<p id="copyright"> ©SolarScope</p>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="img/SolarScope.png" alt="SolarScope" class="footer-logo">
+            <p class="footer-copyright">© 2026 SolarScope</p>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-team">
+            <p class="footer-team-label">Gemaakt door</p>
+            <div class="footer-team-names">
+                <span>Nathan</span>
+                <span>Fynn</span>
+                <span>Petra</span>
+                <span>Zakaria</span>
+            </div>
+        </div>
+    </div>
 </footer>
