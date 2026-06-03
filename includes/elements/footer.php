@@ -10,9 +10,11 @@
             <div class="footer-team-names">
                 <span>Nathan</span>
                 <span>Fynn</span>
-                <span>Petra</span>
                 <span>Zakaria</span>
             </div>
+        </div>
+        <div class="styling-credits">
+            <span>Styling door Nathan</span>
         </div>
     </div>
 </footer>

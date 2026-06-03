@@ -1,1 +1,0 @@
-<div class="block-signature">Petra</div>
