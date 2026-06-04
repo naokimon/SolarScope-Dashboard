@@ -1,14 +1,3 @@
-<?php // Amsterdam temperatuur ophalen met api
-
-// Zonopkomst en zonsondergang ophalen met api
-
-
-// Uurverwachting (09:00 - 23:00) ophalen met api
-
-
-
-?>
-
 <main class="main-page">
     <section class="dashboard">
         <div class="block-row">
