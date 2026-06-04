@@ -1,2 +1,2 @@
 # SolarScope-Dashboard
-Dashboard van Nathan, Fynn, Zakaria en Petra
+Dashboard van Nathan, Fynn en Zakaria
