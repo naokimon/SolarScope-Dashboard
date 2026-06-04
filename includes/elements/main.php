@@ -28,7 +28,7 @@
                     <?php include "includes/widgets/tijdspanne.php"; ?>
                 </article>
                 <article class="dashboard-grid-block">
-
+                    <?php include "includes/widgets/zonnepanelen.php"; ?>
                 </article>
                 <article class="dashboard-grid-block">
 
