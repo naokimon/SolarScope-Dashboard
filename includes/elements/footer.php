@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="styling-credits">
-            <span>Styling door Nathan</span>
+            <span>Met styling door Nathan</span>
         </div>
     </div>
 </footer>
