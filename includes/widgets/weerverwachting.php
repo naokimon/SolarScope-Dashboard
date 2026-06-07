@@ -35,17 +35,19 @@ function weercode_naar_omschrijving($code)
 ?>
 
 <h1>Weerverwachting in Amsterdam</h1>
-<?php if (!empty($uurverwachting)): ?>
-    <ul class="uurverwachting">
-        <?php foreach ($uurverwachting as $u): ?>
-            <li>
-                <span class="uur"><?php echo sprintf('%02d:00', $u['uur']); ?></span>
-                <span class="weer"><?php echo htmlspecialchars(weercode_naar_omschrijving($u['code'])); ?></span>
-                <span class="kans"><?php echo htmlspecialchars($u['kans']); ?>%</span>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-<?php else: ?>
-    <p class="weerverwachting">Niet beschikbaar</p>
-<?php endif; ?>
+<div class="fadeIn scroll">
+    <?php if (!empty($uurverwachting)): ?>
+        <ul class="uurverwachting">
+            <?php foreach ($uurverwachting as $u): ?>
+                <li>
+                    <span class="uur"><?php echo sprintf('%02d:00', $u['uur']); ?></span>
+                    <span class="weer"><?php echo htmlspecialchars(weercode_naar_omschrijving($u['code'])); ?></span>
+                    <span class="kans"><?php echo htmlspecialchars($u['kans']); ?>%</span>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    <?php else: ?>
+        <p class="weerverwachting">Niet beschikbaar</p>
+    <?php endif; ?>
+</div>
 <?php include "includes/footers/fynn.php" ?>

@@ -13,7 +13,9 @@ if ($response !== false) {
 ?>
 
 <h1>Actuele temperatuur Amsterdam</h1>
-<p class="temperatuur">
-    <?php echo $temperatuur !== null ? htmlspecialchars($temperatuur) . " &deg;C" : "Niet beschikbaar"; ?>
-</p>
+<div class="fadeIn">
+    <p class="temperatuur">
+        <?php echo $temperatuur !== null ? htmlspecialchars($temperatuur) . " &deg;C" : "Niet beschikbaar"; ?>
+    </p>
+</div>
 <?php include "includes/footers/fynn.php" ?>

@@ -16,11 +16,13 @@ if ($response2 !== false) {
 
 ?>
 
-<h1 class="zonh1">Zonopkomst en zonsondergang</h1>
-<p class="zon-opkomst">
-    <?php echo $opkomstdatum !== null ? htmlspecialchars($opkomstdatum) : "Niet beschikbaar"; ?>
-</p>
-<p class="zon-ondergang">
-    <?php echo $ondergangdatum !== null ? htmlspecialchars($ondergangdatum) : "Niet beschikbaar"; ?>
-</p>
+<div class="fadeIn">
+    <h1 class="zonh1">Zonopkomst en zonsondergang</h1>
+    <p class="zon-opkomst">
+        <?php echo $opkomstdatum !== null ? htmlspecialchars($opkomstdatum) : "Niet beschikbaar"; ?>
+    </p>
+    <p class="zon-ondergang">
+        <?php echo $ondergangdatum !== null ? htmlspecialchars($ondergangdatum) : "Niet beschikbaar"; ?>
+    </p>
+</div>
 <?php include "includes/footers/fynn.php" ?>

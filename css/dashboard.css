@@ -159,3 +159,22 @@
 .dark-mode .dashboard-grid-block h1 {
     color: rgba(255, 255, 255, 0.45);
 }
+
+/* ─── Animations ────────────────────────────────────────── */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+        letter-spacing: 0.1em;
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        letter-spacing: normal;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+}

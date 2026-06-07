@@ -8,3 +8,7 @@
     --card-border:     rgba(255, 255, 255, 0.08);
     color: white;
 }
+
+*, *::before, *::after {
+    transition: background-color 0.25s ease-in, color 0.25s ease-in, border-color 0.25s ease-in, box-shadow 0.25s ease-in;
+}
