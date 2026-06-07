@@ -1,0 +1,161 @@
+/* ─── Main page & background ─────────────────────────────── */
+
+.main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 140vh;
+    width: 100vw;
+    padding: 50px 0;
+}
+
+.main-page::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background-image: url("../img/forest.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.42;
+    pointer-events: none;
+}
+
+/* ─── Dashboard container ────────────────────────────────── */
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+    z-index: 30;
+    padding: 36px;
+    border-radius: 28px;
+    background: rgba(239, 240, 227, 0.30);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    box-shadow: var(--shadow-lg);
+}
+
+.block-row {
+    display: flex;
+    gap: 24px;
+}
+
+.block-grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 550px;
+    row-gap: 28px;
+    column-gap: 50px;
+}
+
+/* ─── Cards ──────────────────────────────────────────────── */
+
+/* Shared card base */
+.dashboard-block,
+.dashboard-grid-block {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius-card);
+    border: 1px solid var(--card-border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.dashboard-block {
+    height: 300px;
+    width: 550px;
+    box-shadow: var(--shadow-md);
+}
+
+.dashboard-grid-block {
+    height: 136px;
+    width: 250px;
+    box-shadow: var(--shadow-sm);
+}
+
+.dashboard-block:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.dashboard-grid-block:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ─── Card typography ────────────────────────────────────── */
+
+.dashboard-block h1 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding: 18px 20px 10px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.dashboard-grid-block h1 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 12px 14px 4px;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.temperatuur {
+    font-size: 2.2rem;
+    font-weight: 700;
+    padding: 4px 14px 0;
+    color: var(--primary-color);
+    letter-spacing: -0.02em;
+}
+
+.zon-opkomst,
+.zon-ondergang,
+.datum-tijd {
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 4px 14px 0;
+}
+
+.datum-tijd {
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+}
+
+/* ─── Block signature ────────────────────────────────────── */
+
+.block-signature {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    font-size: 0.5rem;
+    font-weight: 300;
+    text-align: center;
+    opacity: 0.5;
+}
+
+/* ─── Dark mode overrides ────────────────────────────────── */
+
+.dark-mode .dashboard {
+    background: rgba(20, 20, 20, 0.45);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .dashboard-block h1,
+.dark-mode .dashboard-grid-block h1 {
+    color: rgba(255, 255, 255, 0.45);
+}

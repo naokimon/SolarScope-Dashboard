@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color:  #FF6F06;
+    --secondary-color: #EFF0E3;
+    --button-hover:   #FF8C35;
+    --card-bg:        rgba(239, 240, 227, 0.82);
+    --card-border:    rgba(255, 255, 255, 0.65);
+    --shadow-sm:      0 2px 8px  rgba(0, 0, 0, 0.08);
+    --shadow-md:      0 4px 20px rgba(0, 0, 0, 0.12);
+    --shadow-lg:      0 8px 40px rgba(0, 0, 0, 0.18);
+    --radius-card:    18px;
+    --radius-sm:      10px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--primary-color);
+}

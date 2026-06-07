@@ -1,0 +1,10 @@
+/* ─── Dark mode base ─────────────────────────────────────── */
+
+.dark-mode {
+    --primary-color:   #a3a3a3;
+    --secondary-color: #1d1d1d;
+    --button-hover:    #2a2a2a;
+    --card-bg:         rgba(29, 29, 29, 0.75);
+    --card-border:     rgba(255, 255, 255, 0.08);
+    color: white;
+}
