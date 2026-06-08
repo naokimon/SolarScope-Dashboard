@@ -133,6 +133,12 @@
     letter-spacing: 0.01em;
 }
 
+.temperatuur-header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
 /* ─── Block signature ────────────────────────────────────── */
 
 .block-signature {

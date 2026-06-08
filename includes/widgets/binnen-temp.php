@@ -7,15 +7,16 @@ if ($response !== false) {
     $data = json_decode($response, true);
     if (isset($data['current']['temperature_2m'])) {
         $temperatuur = $data['current']['temperature_2m'];
+        $temperatuur += 1.5;
     }
 }
 
 ?>
 
-<h1 class="temperatuur-header">Actuele temperatuur Amsterdam</h1>
+<h1 class="temperatuur-header">Actuele binnen temperatuur</h1>
 <div class="temperatuur-container fadeIn">
     <p class="temperatuur">
         <?php echo $temperatuur !== null ? htmlspecialchars($temperatuur) . " &deg;C" : "Niet beschikbaar"; ?>
     </p>
 </div>
-<?php include "includes/footers/fynn.php" ?>
+<?php include "includes/footers/nathan.php"; ?>
