@@ -172,3 +172,13 @@
 .dark-mode #dark-mode svg:last-child {
     display: block;
 }
+
+/* ─── Actuele Temperatuur ────────────────────────────────── */
+
+.temperatuur-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}

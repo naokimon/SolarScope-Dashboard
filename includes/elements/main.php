@@ -14,13 +14,13 @@
                     <?php include "includes/widgets/adamweer.php"; ?>
                 </article>
                 <article class="dashboard-grid-block">
-                    <?php include "includes/widgets/zonsopkomst.php"; ?>
+                    <?php include "includes/widgets/binnen-temp.php"; ?>
                 </article>
                 <article class="dashboard-grid-block">
                     <?php include "includes/widgets/tijd.php"; ?>
                 </article>
                 <article class="dashboard-grid-block">
-                    <?php include "includes/widgets/dark-mode.php"; ?>
+                    <?php include "includes/widgets/zonsopkomst.php"; ?>
                 </article>
             </div>
             <div class="block-grid">
@@ -31,7 +31,7 @@
                     <?php include "includes/widgets/zonnepanelen.php"; ?>
                 </article>
                 <article class="dashboard-grid-block">
-
+                    <?php include "includes/widgets/dark-mode.php"; ?>
                 </article>
                 <article class="dashboard-grid-block">
 

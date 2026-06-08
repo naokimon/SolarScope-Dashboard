@@ -12,5 +12,6 @@
         </span>
     </div>
 </div>
+<?php include "includes/footers/nathan.php"; ?>
 
 <script src="../../js/zonnepanelen.js"></script>
