@@ -5,16 +5,18 @@
             <p class="footer-copyright">© 2026 SolarScope</p>
         </div>
         <div class="footer-divider"></div>
-        <div class="footer-team">
-            <p class="footer-team-label">Gemaakt door</p>
-            <div class="footer-team-names">
-                <span>Nathan</span>
-                <span>Fynn</span>
-                <span>Zakaria</span>
+        <div class="footer-credits">
+            <div class="footer-team">
+                <p class="footer-team-label">Gemaakt door</p>
+                <div class="footer-team-names">
+                    <span>Nathan</span>
+                    <span>Fynn</span>
+                    <span>Zakaria</span>
+                </div>
             </div>
-        </div>
-        <div class="styling-credits">
-            <span>Met styling door Nathan</span>
+            <div class="styling-credits">
+                <span>Met styling door Nathan</span>
+            </div>
         </div>
     </div>
 </footer>

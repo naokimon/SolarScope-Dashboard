@@ -103,17 +103,69 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 5px;
-    padding: 0 10px;
+    gap: 2px;
+    padding: 4px 14px 6px;
 }
 
-.zonnepanelen span {
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 4px 14px 0;
-    color: var(--primary-color);
-    letter-spacing: -0.02em;
+.zon-stat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.zon-stat:last-child {
+    border-bottom: none;
+}
+
+.zon-stat-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.40);
+}
+
+.zon-stat-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.01em;
+}
+
+.zon-stat-unit {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.35);
+    margin-left: 3px;
+    letter-spacing: 0.02em;
+}
+
+.zonnepanelen-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.zonnepanelen-signature {
+    font-size: 0.5rem;
+    font-weight: 300;
+    opacity: 0.75;
+}
+
+/* ─── Dark mode ──── */
+
+.dark-mode .zon-stat {
+    border-bottom-color: rgba(255, 255, 255, 0.07);
+}
+
+.dark-mode .zon-stat-label {
+    color: rgba(255, 255, 255, 0.40);
+}
+
+.dark-mode .zon-stat-unit {
+    color: rgba(255, 255, 255, 0.30);
 }
 
 /* ─── Dark mode toggle ───────────────────────────────────── */

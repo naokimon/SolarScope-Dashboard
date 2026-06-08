@@ -1,17 +1,24 @@
-<h1>Opbrengst zonnepanelen</h1>
-<div class="fadeIn">
-    <div class="zonnepanelen">
-        <span id="panelen">
-            Totaal panelen:
-        </span>
-        <span id="kwhvandaag">
-            kWh vandaag:
-        </span>
-        <span id="kwhweek">
-            kWh week:
-        </span>
+<h1 class="zonnepanelen-header">
+    <span>
+        Zonnepanelen
+    </span>
+    <span class="zonnepanelen-signature">
+        Nathan
+    </span>
+</h1>
+<div class="zonnepanelen fadeIn">
+    <div class="zon-stat">
+        <span class="zon-stat-label">Panelen</span>
+        <span class="zon-stat-value" id="panelen">—</span>
+    </div>
+    <div class="zon-stat">
+        <span class="zon-stat-label">Vandaag</span>
+        <span class="zon-stat-value" id="kwhvandaag">—<span class="zon-stat-unit">kWh</span></span>
+    </div>
+    <div class="zon-stat">
+        <span class="zon-stat-label">Deze week</span>
+        <span class="zon-stat-value" id="kwhweek">—<span class="zon-stat-unit">kWh</span></span>
     </div>
 </div>
-<?php include "includes/footers/nathan.php"; ?>
 
 <script src="../../js/zonnepanelen.js"></script>

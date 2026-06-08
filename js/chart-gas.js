@@ -20,6 +20,12 @@ document.addEventListener("tijdspanne-change", (e) => {
     drawChart(huidigePeriode);
 });
 
+let resizeTimer;
+window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => drawChart(huidigePeriode), 150);
+});
+
 async function drawChart(periode) {
     const chartData = await fetch(dataFiles[periode]).then(r => r.json());
 
@@ -27,8 +33,9 @@ async function drawChart(periode) {
     const title  = darkMode === "active" ? "#EFF0E3" : "#000000";
     const colors = darkMode === "active" ? ["#FF8C35"] : ["#FF6F06"];
 
+    const container = document.getElementById("gas-chart");
     const data  = google.visualization.arrayToDataTable(chartData);
-    const chart = new google.visualization.LineChart(document.getElementById("gas-chart"));
+    const chart = new google.visualization.LineChart(container);
     chart.draw(data, {
         title: titels[periode],
         titleTextStyle: { color: title },
@@ -37,7 +44,7 @@ async function drawChart(periode) {
         legend: { position: "bottom", textStyle: { color: title } },
         hAxis: { textStyle: { color: title }, gridlines: { color: "transparent" } },
         vAxis: { textStyle: { color: title } },
-        width: 450,
-        height: 250,
+        width: container.offsetWidth  || 450,
+        height: container.offsetHeight || 250,
     });
 }

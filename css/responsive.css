@@ -1,10 +1,62 @@
+/* ─── Tablet (≤ 1024px) ──────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .header-inner {
+        padding: 0 24px;
+    }
+
+    .footer-inner {
+        padding: 0 24px;
+    }
+
+    .dashboard {
+        padding: 24px;
+    }
+
+    .block-row {
+        gap: 16px;
+    }
+
+    .dashboard-block {
+        width: 460px;
+    }
+
+    .block-grid {
+        width: 460px;
+        column-gap: 16px;
+    }
+
+    .dashboard-grid-block {
+        width: 210px;
+    }
+}
+
 /* ─── Mobile (≤ 768px) ───────────────────────────────────── */
 
 @media (max-width: 768px) {
+
+    /* ── Header ─────────────────────────────────────── */
+
+    .main-header {
+        height: 64px;
+    }
+
+    .header-inner {
+        padding: 0 16px;
+    }
+
+    .header-badge {
+        font-size: 0.68rem;
+        padding: 4px 10px;
+        letter-spacing: 0.05em;
+    }
+
+    /* ── Main page ───────────────────────────────────── */
+
     .main-page {
-        height: auto;
         min-height: 100vh;
-        padding: 24px 0;
+        height: auto;
+        padding: 20px 0 32px;
         align-items: flex-start;
     }
 
@@ -12,27 +64,29 @@
         height: 100%;
     }
 
+    /* ── Dashboard ───────────────────────────────────── */
+
     .dashboard {
-        row-gap: 16px;
-        padding: 16px;
+        row-gap: 12px;
+        padding: 12px;
         width: 100%;
         border-radius: 0;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: rgba(239, 240, 227, 0.20);
+        box-shadow: none;
+        border: none;
     }
+
+    .dark-mode .dashboard {
+        background: rgba(20, 20, 20, 0.30);
+    }
+
+    /* ── Block rows & grids ──────────────────────────── */
 
     .block-row {
         flex-direction: column;
-        gap: 16px;
-    }
-
-    .dashboard-block {
-        width: 100%;
-        height: auto;
-        min-height: 160px;
-    }
-
-    .dashboard-block h1 {
-        font-size: 0.9rem;
-        padding: 14px 14px 8px;
+        gap: 12px;
     }
 
     .block-grid {
@@ -40,42 +94,85 @@
         height: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 12px;
+        gap: 10px;
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+
+    /* ── Cards ───────────────────────────────────────── */
+
+    .dashboard-block {
+        width: 100%;
+        height: auto;
+        min-height: 180px;
     }
 
     .dashboard-grid-block {
         width: 100%;
         height: auto;
-        min-height: 100px;
+        min-height: 96px;
+    }
+
+    /* ── Card typography ─────────────────────────────── */
+
+    .dashboard-block h1 {
+        font-size: 0.78rem;
+        padding: 12px 12px 6px;
     }
 
     .dashboard-grid-block h1 {
-        font-size: 0.7rem;
-        padding: 10px 10px 4px;
+        font-size: 0.65rem;
+        padding: 8px 10px 2px;
     }
 
     .temperatuur {
-        font-size: 1.8rem;
-        padding: 4px 10px 0;
+        font-size: 1.7rem;
+        padding: 4px 12px 0;
     }
 
     .zon-opkomst,
     .zon-ondergang,
     .datum-tijd {
+        font-size: 0.92rem;
+        padding: 4px 10px 0;
+    }
+
+    /* ── Weather list ────────────────────────────────── */
+
+    .uurverwachting {
+        padding: 0 12px 12px;
+    }
+
+    .uurverwachting li {
+        font-size: 0.8rem;
+        gap: 8px;
+        padding: 5px 0;
+        grid-template-columns: 50px 1fr auto;
+    }
+
+    /* ── Tijdspanne buttons ──────────────────────────── */
+
+    .tijdspanne-knoppen {
+        padding: 10px 12px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .tijdspanne-knop {
+        font-size: 0.8rem;
+        padding: 7px 16px;
+        flex: 1;
+        text-align: center;
+    }
+
+    /* ── Zonnepanelen ────────────────────────────────── */
+
+    .zonnepanelen span {
         font-size: 1rem;
         padding: 4px 10px 0;
     }
 
-    .uurverwachting {
-        padding: 0 14px 14px;
-    }
-
-    .uurverwachting li {
-        font-size: 0.82rem;
-        gap: 8px;
-    }
-
-    /* ─── Footer mobile ──────────────────────────────────── */
+    /* ── Footer ──────────────────────────────────────── */
 
     .footer {
         height: auto;
@@ -85,8 +182,8 @@
     .footer-inner {
         flex-direction: column;
         align-items: center;
-        padding: 0 24px;
-        gap: 14px;
+        padding: 0 20px;
+        gap: 12px;
         text-align: center;
     }
 
@@ -94,9 +191,12 @@
         align-items: center;
     }
 
+    .footer-logo {
+        height: 28px;
+    }
+
     .footer-divider {
-        width: 80%;
-        height: 1px;
+        width: 70%;
         flex: unset;
     }
 
@@ -106,9 +206,30 @@
 
     .footer-team-names {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .styling-credits {
         align-items: center;
+    }
+}
+
+/* ─── Small phones (≤ 420px) ─────────────────────────────── */
+
+@media (max-width: 420px) {
+    .header-badge {
+        display: none;
+    }
+
+    .block-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid-block {
+        min-height: 80px;
+    }
+
+    .tijdspanne-knop {
+        width: 100%;
     }
 }
