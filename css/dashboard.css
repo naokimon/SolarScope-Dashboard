@@ -85,7 +85,7 @@
 
 .dashboard-grid-block-long {
     height: 136px;
-    width: 550px;
+    width: 100%;
     box-shadow: var(--shadow-sm);
 }
 

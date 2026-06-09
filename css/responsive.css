@@ -150,6 +150,14 @@
         grid-template-columns: 50px 1fr auto;
     }
 
+    /* ── Tijdspanne long block ───────────────────────── */
+
+    .dashboard-grid-block-long {
+        grid-column: span 2;
+        min-height: 96px;
+        height: auto;
+    }
+
     /* ── Tijdspanne buttons ──────────────────────────── */
 
     .tijdspanne-knoppen {

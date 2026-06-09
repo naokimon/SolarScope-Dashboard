@@ -65,11 +65,8 @@
 .tijdspanne-knoppen {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 20px;
     padding: 14px 20px;
-    overflow-x: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--primary-color) transparent;
 }
 
 .tijdspanne-knop {
