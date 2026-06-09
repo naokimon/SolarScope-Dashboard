@@ -117,6 +117,7 @@
     text-transform: uppercase;
     padding: 12px 14px 4px;
     color: rgba(0, 0, 0, 0.45);
+    text-align: center;
 }
 
 .temperatuur {
@@ -133,6 +134,7 @@
     font-size: 1.15rem;
     font-weight: 600;
     padding: 4px 14px 0;
+    text-align: center;
 }
 
 .datum-tijd {
