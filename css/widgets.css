@@ -64,7 +64,8 @@
 
 .tijdspanne-knoppen {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 50px;
     padding: 14px 20px;
     overflow-x: auto;
     scrollbar-width: thin;
@@ -73,7 +74,7 @@
 
 .tijdspanne-knop {
     font-family: "Inter", sans-serif;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 600;
     padding: 9px 26px;
     border: 2px solid var(--primary-color);

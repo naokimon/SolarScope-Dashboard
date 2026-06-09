@@ -24,17 +24,14 @@
                 </article>
             </div>
             <div class="block-grid">
-                <article class="dashboard-grid-block">
+                <article class="dashboard-grid-block-long">
                     <?php include "includes/widgets/tijdspanne.php"; ?>
-                </article>
-                <article class="dashboard-grid-block">
-                    <?php include "includes/widgets/zonnepanelen.php"; ?>
                 </article>
                 <article class="dashboard-grid-block">
                     <?php include "includes/widgets/dark-mode.php"; ?>
                 </article>
                 <article class="dashboard-grid-block">
-
+                    <?php include "includes/widgets/zonnepanelen.php"; ?>
                 </article>
             </div>
         </div>
