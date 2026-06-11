@@ -3,7 +3,14 @@
 $opkomstdatum = null;
 $ondergangdatum = null;
 $api2Url = "https://api.sunrise-sunset.org/json?lat=52.22408&lng=-4.9041&date=today";
-$response2 = @file_get_contents($api2Url);
+$ch2 = curl_init($api2Url);
+curl_setopt_array($ch2, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT        => 10,
+    CURLOPT_IPRESOLVE      => CURL_IPRESOLVE_V4,
+]);
+$response2 = curl_exec($ch2);
+curl_close($ch2);
 if ($response2 !== false) {
     $data2 = json_decode($response2, true);
     if (isset($data2['results']['sunrise'])) {

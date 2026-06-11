@@ -2,7 +2,14 @@
 
 $uurverwachting = [];
 $api3Url = "https://api.open-meteo.com/v1/forecast?latitude=52.3676&longitude=4.9041&hourly=weathercode,precipitation_probability&timezone=Europe/Amsterdam&forecast_days=1";
-$response3 = @file_get_contents($api3Url);
+$ch3 = curl_init($api3Url);
+curl_setopt_array($ch3, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT        => 10,
+    CURLOPT_IPRESOLVE      => CURL_IPRESOLVE_V4,
+]);
+$response3 = curl_exec($ch3);
+curl_close($ch3);
 if ($response3 !== false) {
     $data3 = json_decode($response3, true);
     if (isset($data3['hourly']['time'], $data3['hourly']['weathercode'], $data3['hourly']['precipitation_probability'])) {
