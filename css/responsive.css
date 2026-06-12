@@ -1,33 +1,42 @@
-/* ─── Tablet (≤ 1024px) ──────────────────────────────────── */
 
-@media (max-width: 1024px) {
-    .header-inner {
-        padding: 0 24px;
-    }
-
+/* Laptop & desktop (1200px) */
+@media (max-width: 1200px) {
+    .header-inner,
     .footer-inner {
         padding: 0 24px;
     }
 
     .dashboard {
-        padding: 24px;
+        width: min(100% - 32px, 1000px);
+        padding: 28px;
+        row-gap: 20px;
     }
 
     .block-row {
         gap: 16px;
     }
 
+
     .dashboard-block {
-        width: 460px;
+        flex: 1 1 0;
+        width: auto;
+        min-width: 0;
     }
 
+
     .block-grid {
-        width: 460px;
+        flex: 1 1 0;
+        width: auto;
+        height: auto;
+        align-content: flex-start;
         column-gap: 16px;
+        row-gap: 16px;
     }
 
     .dashboard-grid-block {
-        width: 210px;
+        flex: 1 1 calc(50% - 8px);
+        width: auto;
+        min-width: 0;
     }
 }
 
@@ -90,6 +99,7 @@
     }
 
     .block-grid {
+        flex: none;
         width: 100%;
         height: auto;
         display: grid;
@@ -102,12 +112,14 @@
     /* ── Cards ───────────────────────────────────────── */
 
     .dashboard-block {
+        flex: none;
         width: 100%;
         height: auto;
         min-height: 180px;
     }
 
     .dashboard-grid-block {
+        flex: none;
         width: 100%;
         height: auto;
         min-height: 96px;
