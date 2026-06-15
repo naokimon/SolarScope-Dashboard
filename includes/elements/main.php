@@ -37,6 +37,7 @@
         </div>
         <div class="block-row">
             <article class="dashboard-block">
+                <?php include "includes/widgets/zakaria-chart.php"; ?>
             </article>
             <article class="dashboard-block">
 
