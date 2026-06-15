@@ -6,12 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.add("dark-mode");
         localStorage.setItem("darkmode", "active");
         if (typeof drawChart === "function") drawChart(typeof huidigePeriode !== "undefined" ? huidigePeriode : "maand");
+        if (typeof drawStroomChart === "function") drawStroomChart(typeof stroomPeriode !== "undefined" ? stroomPeriode : "maand");
     }
 
     const disableDarkmode = () => {
         document.body.classList.remove("dark-mode");
         localStorage.setItem("darkmode", null);
         if (typeof drawChart === "function") drawChart(typeof huidigePeriode !== "undefined" ? huidigePeriode : "maand");
+        if (typeof drawStroomChart === "function") drawStroomChart(typeof stroomPeriode !== "undefined" ? stroomPeriode : "maand");
     }
 
     if (darkMode === "active") enableDarkmode();
