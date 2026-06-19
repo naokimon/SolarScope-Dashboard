@@ -4,7 +4,7 @@
             <img src="img/SolarScope.png" alt="SolarScope">
         </div>
         <nav class="header-nav">
-            <span class="header-badge">Live Dashboard</span>
+            <?php include "includes/widgets/dark-mode.php"?>
         </nav>
     </div>
 </header>

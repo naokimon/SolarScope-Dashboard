@@ -16,11 +16,8 @@
                 <article class="dashboard-grid-block">
                     <?php include "includes/widgets/binnen-temp.php"; ?>
                 </article>
-                <article class="dashboard-grid-block">
-                    <?php include "includes/widgets/tijd.php"; ?>
-                </article>
-                <article class="dashboard-grid-block">
-                    <?php include "includes/widgets/zonsopkomst.php"; ?>
+                <article class="dashboard-grid-block-long">
+                    <?php include "includes/widgets/zonnepanelen.php"; ?>
                 </article>
             </div>
             <div class="block-grid">
@@ -28,10 +25,10 @@
                     <?php include "includes/widgets/tijdspanne.php"; ?>
                 </article>
                 <article class="dashboard-grid-block">
-                    <?php include "includes/widgets/dark-mode.php"; ?>
+                    <?php include "includes/widgets/tijd.php"; ?>
                 </article>
                 <article class="dashboard-grid-block">
-                    <?php include "includes/widgets/zonnepanelen.php"; ?>
+                    <?php include "includes/widgets/zonsopkomst.php"; ?>
                 </article>
             </div>
         </div>

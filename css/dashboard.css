@@ -89,6 +89,11 @@
     box-shadow: var(--shadow-sm);
 }
 
+.dashboard-grid-block-long:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
 .dashboard-block:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
